@@ -4,86 +4,97 @@
 }
 
 @font-face {
-  font-family: font;
-  src: url(fonts/ageo.otf);
+   font-family: font;
+   src: url(fonts/ageo.otf);
 }
 
 body {
-   background-color: #fff;
+   /*background-color: #d83;*/
+   font: 14px Arial;
+}
+
+::-webkit-scrollbar {
+   display: none;
+}
+
+::-moz-scrollbar {
+   display: none;
 }
 
 #header {
+   /*background-color: #abe;*/
+   background-color: white;
    display: block;
 
+   opacity: 0.9;
    width: 100%;
-   padding-top: 100px;
-   padding-bottom: 40px;
+   padding-top: 50px;
+
+   /*border-bottom: 2px solid #9cc;*/
+
+   position: sticky;
+   top: -140px;
+   z-index: 100;
 
    text-align: center;
+   text-transform: capitalize;
+   letter-spacing: 3px;
+}
 
-   color: #222;
-
-   font-family: monospace;
-   font-size: 22px;
+.title {
+   display: block;
+   background-image: url(img/title.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   margin: auto;
+   width: 250px;
+   height: 70px;
 }
 
 nav {
-   background-color: #fff;
-   position: sticky;
-   top: 0;
-   z-index: 100;
    width: 100%;
-   padding: 20px 0;
-   text-align: center;
+   height: 30px;
+   padding-top: 25px;
 }
 
-nav ul li {
-   display: inline-block;
-   padding: 0 auto;
-   line-height: 50px;
+nav li {
+   list-style: none;
+   padding: 0 16px;
 }
 
-nav ul li a {
-   padding: 0 20px;
+nav ul {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: center;
+   align-items: flex-start;
+   align-content: center;
+   width: auto;
+   margin: auto;
 }
 
-a {
-   display: block;
-   color: #666;
-   text-decoration: none;
+.n1, .n2, .n3 {
+   flex-basis: 30%;
+   border-radius: 5px;
+   max-width: 100%;
+
+   -webkit-transition: all 200ms ease;
+   -moz-transition: all 200ms ease;
+   -o-transition: all 200ms ease;
+   transition: all 200ms ease;
 }
 
-a:hover {
-   color: #7aa;
-   transition: .2s;
-}
+.n1 { width: 42px; }
+.n2, .n3 { width: 63px; }
 
-.current {
-   color: #222;
-}
+.n1:hover { width: 45px; }
+.n2:hover, .n3:hover { width: 66px; }
 
 .wrapper {
-   padding: 30px;
-   margin: 30px 10%;
-   width: auto;
+   /*background-color: #eab;*/
+   margin: auto;
+   padding: 2.5%;
+   max-width: 1300px;
+   line-height: 1.0;
+   word-spacing: 2px;
 }
 
-.menu {
-   display: flex;
-   flex-flow: row wrap;
-   justify-content: center;
-}
-
-.menu a {
-   flex-basis: 28%;
-   margin: 2%;
-}
-
-.menu p {
-   padding-bottom: 20px;
-   text-align: center;
-}
-
-.menu img {
-   width: 100%;
-}

@@ -4,40 +4,98 @@
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <title>felicia karlholm</title>
       <LINK href="styles.css" rel="stylesheet" type="text/css">
+<style>
+.gallery {
+   /*background-color: #bea;*/
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: center;
+   margin: 0 50px;
+}
+
+#img { margin: 20px; }
+
+#img1 img, #img2 img, #img3 img {
+   flex-basis: 30%;
+   border-radius: 5px;
+   margin: auto;
+   max-width: 100%;
+
+   -webkit-transition: all .5s ease;
+   -moz-transition: all .5s ease;
+   -o-transition: all .5s ease;
+   transition: all .5s ease;
+}
+
+#img1 img:hover, #img2 img:hover, #img3 img:hover { filter: brightness(120%); }
+
+#img1 img { animation-name: img1;
+   animation: 1000ms ease 0s normal forwards 1 img1; }
+
+#img2 img { animation-name: img2;
+   animation: 1082ms ease 0s normal forwards 1 img2; }
+
+#img3 img { animation-name: img3;
+   animation: 1166ms ease 0s normal forwards 1 img3; }
+
+@keyframes img2 {
+   0% { filter: brightness(200%);opacity:0; transform: translateY(10%); }
+   100% { opacity:1; transform: translateY(0%); }
+}
+
+@keyframes img1 {
+   0% { opacity:0; transform: translateY(10%); }
+   8% { filter: brightness(200%);opacity:0; transform: translateY(10%); }
+   100% { opacity:1; transform: translateY(0%); }
+}
+
+@keyframes img3 {
+   0% { opacity:0; transform: translateY(10%); }
+   16% { filter: brightness(200%);opacity:0; transform: translateY(10%); }
+   100% { opacity:1; transform: translateY(0%); }
+}
+
+@media (max-width: 800px) {
+   .gallery {
+      flex-flow: column wrap;
+   }
+}
+</style>
    </head>
    <body>
       <header id="header">
-	 <p id="title">felicia karlholm art</p>
-      </header>
+	 <span class="title"></span>
 
-      <nav>
-	 <ul>
-	    <li>
-	       <a href="home.html">home</a>
-	    </li>
-	    <li>
-	       <a href="gallery.html" class="current">gallery</a>
-	    </li>
-	    <li>
-	       <a href="contact.html">contact</a>
-	    </li>
-	 </ul>
-      </nav>
+	 <nav>
+	    <ul>
+	       <li>
+		  <a href="home.html">
+		     <img class="n1" src="img/home.png" alt="home">
+		  </a>
+	       </li>
+	       <li>
+		  <img class="n2" src="img/gallery.png" alt="gallery">
+	       </li>
+	       <li>
+		  <a href="contact.html">
+		     <img class="n3" src="img/contact.png" alt="contact">
+		  </a>
+	       </li>
+	    </ul>
+	 </nav>
+      </header>
 
       <div class="wrapper">
 
-	 <section class="menu">
-	    <a href="#">
-	       <p>katte</p>
-	       <img src="img/kat.jpeg" alt="autum.jpg">
+	 <section class="gallery">
+	    <a id="img1" href="#">
+	       <img src="img/front.png" alt="hej">
 	    </a>
-	    <a href="#">
-	       <p>vægge</p>
-	       <img src="img/væg.jpeg" alt="væg.jpg">
+	    <a id="img2" href="#">
+	       <img src="img/menu2.png" alt="hej">
 	    </a>
-	    <a href="#">
-	       <p>kulde</p>
-	       <img src="img/is.jpg" alt="is.jpg">
+	    <a id="img3" href="#">
+	       <img src="img/menu3.png" alt="hej">
 	    </a>
 	 </section>
 
