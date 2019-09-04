@@ -4,23 +4,33 @@
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <title>felicia karlholm</title>
       <LINK href="styles.css" rel="stylesheet" type="text/css">
-<style>
+      <style>
+
 .gallery {
    /*background-color: #bea;*/
    display: flex;
    flex-flow: row nowrap;
-   justify-content: center;
-   margin: 0 50px;
+
+   justify-content: space-evenly;
+   align-items: center;
+
+   width: auto;
+   margin: 0 6%;
+
+   transform: translateX(27px);
 }
 
 #img1, #img2, #img3 {
-   margin: 20px;
+   /*background-color: #abe;*/
+   margin: 2%;
+   flex-shrink: 1;
 }
 
 #img1 img, #img2 img, #img3 img {
    flex-basis: 30%;
    border-radius: 5px;
    margin: auto;
+   max-height: 100%;
    max-width: 100%;
 
    -webkit-transition: filter .2s ease-in-out;
@@ -46,24 +56,28 @@
    100% { opacity:1; transform: translateY(0%); }
 }
 
-@keyframes img2 {
-   0% { opacity:0; transform: translateY(7%); }
-   16% { opacity:0; }
-   100% { opacity:1; transform: translateY(0%); }
-}
+	 @keyframes img2 {
+	    0% { opacity:0; transform: translateY(7%); }
+	    16% { opacity:0; }
+	    100% { opacity:1; transform: translateY(0%); }
+	 }
 
-@keyframes img3 {
-   0% { opacity:0; transform: translateY(8%); }
-   24% { opacity:0; }
-   100% { opacity:1; transform: translateY(0%); }
-}
+	 @keyframes img3 {
+	    0% { opacity:0; transform: translateY(8%); }
+	    24% { opacity:0; }
+	    100% { opacity:1; transform: translateY(0%); }
+	 }
 
-@media (max-width: 800px) {
-   .gallery {
-      flex-flow: column wrap;
-   }
-}
-</style>
+	 @media (max-width: 800px) {
+	    .gallery {
+	       flex-flow: column wrap;
+	       transform: translateX(0);
+	    }
+	    #img1,#img2,#img3 {
+	       padding-top: 10%;
+	    }
+	 }
+      </style>
    </head>
    <body>
       <header id="header">
@@ -88,11 +102,11 @@
 	 </nav>
       </header>
 
-      <div class="wrapper">
 
+      <div class="wrapper">
 	 <section class="gallery">
 	    <a id="img1" href="#">
-	       <img src="img/front.png" alt="hej">
+	       <img src="img/menu1.png" alt="hej">
 	    </a>
 	    <a id="img2" href="#">
 	       <img src="img/menu2.png" alt="hej">
@@ -101,7 +115,7 @@
 	       <img src="img/menu3.png" alt="hej">
 	    </a>
 	 </section>
-
       </div>
+
    </body>
 </html>

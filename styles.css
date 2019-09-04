@@ -28,7 +28,7 @@ body {
 
    opacity: 0.9;
    width: 100%;
-   padding-top: 50px;
+   padding-top: 30px;
 
    /*border-bottom: 2px solid #9cc;*/
 
@@ -86,14 +86,20 @@ nav ul {
 .n1 { width: 42px; }
 .n2, .n3 { width: 63px; }
 
-.n1:hover { width: 45px; }
-.n2:hover, .n3:hover { width: 66px; }
+a .n1:hover { width: 45px; }
+a .n2:hover, .n3:hover { width: 66px; }
 
 .wrapper {
    /*background-color: #eab;*/
-   margin: auto;
-   padding: 2.5%;
+   display: block;
+   position: relative;
+   top: 10px;
+   margin: 1% auto;
+   width: 70%;
    max-width: 1300px;
-   line-height: 1.0;
-   word-spacing: 2px;
+}
+@media (max-width: 800px) {
+   .wrapper {
+      width: 100%;
+   }
 }
