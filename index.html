@@ -16,21 +16,15 @@ body {
    align: center;
 }
 
-#title {
-   display: block;
-   position: absolute;
-   width: 100%;
-   text-align: center;
-   top: 20%;
-      z-index: 1;
-
-   font-size: 20px;
-}
-
-#image {
+#image, #title {
    display: flex;
    justify-content: center;
    align-content: center;
+}
+
+.title {
+   top: 16%;
+		 width: 200px;
 }
 
 .image {
@@ -41,20 +35,38 @@ body {
 }
 
 .button {
-   display: block;
-   position: absolute;
-   height: 300px;
-   width: 200px;
-   z-index: 2;
+			position: absolute;
+			bottom: 16%;
+			margin: auto;
+   width: 100%;
+}
+
+.button a {
+				background-color: #cee;
+				color: #333;
+				border: 2px solid #9bb;
+			 border-radius: 3px;
+				display: block;
+				height: 40px;
+				width: 150px;
+				margin: auto;
+
+				text-align: center;
+				line-height: 40px;
+				text-decoration: none;
 }
 
       </style>
    </head>
+
    <body>
-      <span id=title>felicia karlholm</span>
+						<div id="title">
+         <img class="title" src="img/tit.png">
+      </div>
+
 
       <div class="button">
-	 <p>enter</p>
+	 								<a href="home.html">enter</a>
       </div>
 
       <div id="image">
