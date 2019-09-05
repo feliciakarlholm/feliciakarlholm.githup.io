@@ -1,8 +1,2 @@
-import Highway from "@dogstudio/highway";
-import Fade from "./transition";
-
-const H = new Highway.Core({
-   transitions: {
-      default: Fade,
-   }
-});
+import Swup from 'swup';
+const swup = new Swup();
