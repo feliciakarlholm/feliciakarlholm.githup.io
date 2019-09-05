@@ -3,26 +3,119 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <title>felicia karlholm</title>
-      <link rel="stylesheet" href="style/styles.scss">
+      <LINK href="styles.css" rel="stylesheet" type="text/css">
+      <style>
+
+.gallery {
+   /*background-color: #bea;*/
+   display: flex;
+   flex-flow: row nowrap;
+
+   justify-content: space-evenly;
+   align-items: center;
+
+   width: auto;
+   margin: 0 6%;
+
+   transform: translateX(27px);
+}
+
+#img1, #img2, #img3 {
+   /*background-color: #abe;*/
+   margin: 2%;
+   flex-shrink: 1;
+}
+
+#img1 img, #img2 img, #img3 img {
+   flex-basis: 30%;
+   border-radius: 5px;
+   margin: auto;
+   max-height: 100%;
+   max-width: 100%;
+
+   -webkit-transition: filter .2s ease-in-out;
+   -moz-transition: filter .2s ease-in-out;
+   -o-transition: filter .2s ease-in-out;
+   transition: filter .2s ease-in-out;
+}
+
+.wrapper img:hover { filter: brightness(110%) contrast(130%); }
+
+#img1 img { animation-name: img1;
+   animation: 1000ms ease 0s normal forwards 1 img1; }
+
+#img2 img { animation-name: img2;
+   animation: 1082ms ease 0s normal forwards 1 img2; }
+
+#img3 img { animation-name: img3;
+   animation: 1166ms ease 0s normal forwards 1 img3; }
+
+@keyframes img1 {
+   0% { opacity:0; transform: translateY(6%); }
+   8% { opacity:0; }
+   100% { opacity:1; transform: translateY(0%); }
+}
+
+	    @keyframes img2 {
+	       0% { opacity:0; transform: translateY(7%); }
+	       16% { opacity:0; }
+	       100% { opacity:1; transform: translateY(0%); }
+	    }
+
+	    @keyframes img3 {
+	       0% { opacity:0; transform: translateY(8%); }
+	       24% { opacity:0; }
+	       100% { opacity:1; transform: translateY(0%); }
+	    }
+
+	    @media (max-width: 800px) {
+	       .gallery {
+		  flex-flow: column wrap;
+		  transform: translateX(0);
+	       }
+	       #img1,#img2,#img3 {
+		  padding: 10%;
+	       }
+	    }
+      </style>
    </head>
    <body>
+      <header id="header">
+	 <span class="title"></span>
 
-      <main data-router-wrapper>
-	 <section data-router-view="gallery" class="wrapper">
+	 <nav>
+	    <ul>
+	       <li>
+		  <a href="home.html">
+		     <img class="n1" src="img/hom.png" alt="home">
+		  </a>
+	       </li>
+	       <li>
+		  <img class="n2" src="img/gal.png" alt="gallery">
+	       </li>
+	       <li>
+		  <a href="contact.html">
+		     <img class="n3" src="img/con.png" alt="contact">
+		  </a>
+	       </li>
+	    </ul>
+	 </nav>
+      </header>
 
-	    <div class="gallery">
-	       <a id="img1" href="#">
-		  <img src="img/men1.png" alt="hej">
-	       </a>
-	       <a id="img2" href="#">
-		  <img src="img/men2.png" alt="hej">
-	       </a>
-	       <a id="img3" href="#">
-		  <img src="img/men3.png" alt="hej">
-	       </a>
-	    </div>
 
+      <div class="wrapper">
+	 <section class="gallery">
+	    <a id="img1" href="#">
+	       <img src="img/men1.png" alt="hej">
+	    </a>
+	    <a id="img2" href="#">
+	       <img src="img/men2.png" alt="hej">
+	    </a>
+	    <a id="img3" href="#">
+	       <img src="img/men3.png" alt="hej">
+	    </a>
 	 </section>
-      </main>
+      </div>
+
    </body>
 </html>
