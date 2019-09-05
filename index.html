@@ -6,6 +6,7 @@
       <style>
 
 * {
+   overflow: hidden;
    margin: 0;
    padding: 0;
 }
@@ -16,61 +17,117 @@ body {
    align: center;
 }
 
-#image, #title {
-   display: flex;
-   justify-content: center;
-   align-content: center;
+.container {
+   width: 100%;
+   height: 100%;
 }
 
 .title {
-   top: 16%;
-		 width: 200px;
+   display: block;
+   position: absolute;
+   background-image: url(img/tit.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   top: 30px;
+   width: 250px;
+   height: 70px;
+   left: 50%;
+   transform: translateX(-50%);
+
+   animation-name: title;
+   animation: 2166ms ease 0s normal forwards 1 title;
 }
 
 .image {
+   display: block;
+   position: absolute;
+   background-image: url(img/front2.png);
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 100%;
    height: 100%;
-   flex: 1 1 auto;
-   background-image: url(img/front.jpg);
-   background-size: cover;
+   left: 50%;
+   top: 100px;
+   transform: translateX(-50%);
+
+   animation-name: image;
+   animation: 3500ms ease 0s normal forwards 1 image;
 }
 
 .button {
-			position: absolute;
-			bottom: 16%;
-			margin: auto;
-   width: 100%;
+   display: block;
+   position: absolute;
+
+   background-color: white;
+   color: black;
+   border: 2px solid black;
+   border-radius: 3px;
+   opacity: 0.8;
+
+   margin: auto;
+   bottom: 10%;
+
+   left: 50%;
+   transform: translateX(-50%);
+
+   height: 40px;
+   width: 150px;
+
+   text-align: center;
+   text-decoration: none;
+   text-transform: uppercase;
+   line-height: 40px;
+
+   box-shadow: 1px 2px 4px black;
+
+   transition: all .2s ease-out;
+
+   animation-name: button;
+   animation: 5333ms ease 0s normal forwards 1 button;
 }
 
-.button a {
-				background-color: #cee;
-				color: #333;
-				border: 2px solid #9bb;
-			 border-radius: 3px;
-				display: block;
-				height: 40px;
-				width: 150px;
-				margin: auto;
-
-				text-align: center;
-				line-height: 40px;
-				text-decoration: none;
+a:hover {
+   box-shadow: 3px 4px 6px black;
+   color: #000;
 }
 
+a:active {
+   box-shadow: 1px 2px 4px black;
+}
+
+@keyframes title {
+   0% { opacity: 0; }
+   25% { opacity: 0; transform: translate(-50%, 10%); }
+   100% { opacity: 1; }
+}
+
+@keyframes image {
+   0% { opacity: 0; }
+   45% { opacity: 0; transform: translate(-50%, 12%); }
+   100% { opacity: 1; }
+}
+
+@keyframes button {
+   0% { opacity: 0; }
+   40% { opacity: 0; transform: translate(-50%, 10%); }
+   100% { opacity: 1; }
+}
       </style>
    </head>
 
    <body>
-						<div id="title">
-         <img class="title" src="img/tit.png">
+      <div class="container">
+	 <span class="title"></span>
+
+	 <div class="wrapper">
+	    <div class="image"></div>
+	 </div>
+
+	 <a class="button" href="home.html">
+	    <span>enter</span>
+	 </a>
       </div>
 
-
-      <div class="button">
-	 								<a href="home.html">enter</a>
-      </div>
-
-      <div id="image">
-	 <div class="image"></div>
-      </div>
    </body>
 </html>

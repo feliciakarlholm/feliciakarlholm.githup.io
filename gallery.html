@@ -39,7 +39,7 @@
    transition: filter .2s ease-in-out;
 }
 
-.wrapper img:hover { filter: brightness(110%) contrast(110%); }
+.wrapper img:hover { filter: brightness(110%) contrast(130%); }
 
 #img1 img { animation-name: img1;
    animation: 1000ms ease 0s normal forwards 1 img1; }
@@ -56,27 +56,27 @@
    100% { opacity:1; transform: translateY(0%); }
 }
 
-	 @keyframes img2 {
-	    0% { opacity:0; transform: translateY(7%); }
-	    16% { opacity:0; }
-	    100% { opacity:1; transform: translateY(0%); }
-	 }
-
-	 @keyframes img3 {
-	    0% { opacity:0; transform: translateY(8%); }
-	    24% { opacity:0; }
-	    100% { opacity:1; transform: translateY(0%); }
-	 }
-
-	 @media (max-width: 800px) {
-	    .gallery {
-	       flex-flow: column wrap;
-	       transform: translateX(0);
+	    @keyframes img2 {
+	       0% { opacity:0; transform: translateY(7%); }
+	       16% { opacity:0; }
+	       100% { opacity:1; transform: translateY(0%); }
 	    }
-	    #img1,#img2,#img3 {
-	       padding: 10%;
+
+	    @keyframes img3 {
+	       0% { opacity:0; transform: translateY(8%); }
+	       24% { opacity:0; }
+	       100% { opacity:1; transform: translateY(0%); }
 	    }
-	 }
+
+	    @media (max-width: 800px) {
+	       .gallery {
+		  flex-flow: column wrap;
+		  transform: translateX(0);
+	       }
+	       #img1,#img2,#img3 {
+		  padding: 10%;
+	       }
+	    }
       </style>
    </head>
    <body>
