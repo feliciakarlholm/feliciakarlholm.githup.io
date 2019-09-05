@@ -1,0 +1,226 @@
+* {
+   margin: 0;
+   padding: 0;
+} 
+
+body {
+   font: 14px Arial;
+}
+
+::-webkit-scrollbar {
+   display: none;
+}
+
+::-moz-scrollbar {
+   display: none;
+}
+
+#header {
+   display: block;
+
+   width: 100%;
+   padding-top: 30px;
+
+   height: 30px;
+   position: absolute;
+   z-index: 100;
+
+   text-align: center;
+   text-transform: capitalize;
+   letter-spacing: 3px;
+
+   nav {
+      width: 100%;
+      padding: 10px 0 10px 0;
+      background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+   }
+}
+
+.title {
+   display: block;
+   background-image: url(../img/tit.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   margin: auto;
+   width: 250px;
+   height: 70px;
+
+}
+
+.index-title {
+   animation-name: title;
+   animation: 3s ease 0s normal forwards 1 title;
+}
+
+.nav-list {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: center;
+   align-items: flex-start;
+   align-content: center;
+   width: auto;
+   margin: auto;
+}
+
+.nav-items {
+   list-style: none;
+   padding: 0 16px;
+
+   img {
+      flex-basis: 30%;
+      border-radius: 5px;
+      max-width: 100%;
+      image-resolution: snap;
+
+      -webkit-transition: all 200ms ease;
+      -moz-transition: all 200ms ease;
+      -o-transition: all 200ms ease;
+      transition: all 200ms ease;
+   }
+}
+
+.nav-home { width: 42px; }
+
+.nav-gallery, .nav-contact {
+   width: 63px;
+}
+
+.nav-gallery:hover , .nav-contact:hover {
+width: 66px;
+}
+
+.nav-home:hover {
+width: 45px;
+}
+
+.wrapper {
+   /*background-color: #eab;*/
+   display: block;
+   position: relative;
+   margin: 10vh auto;
+   width: 70%;
+   max-width: 1300px;
+}
+
+.picture {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: center;
+   width: auto;
+   height: 600px;
+   margin: 0 10%;
+
+   animation-name: home;
+   animation: 1166ms ease 0s normal forwards 1 home;
+}
+
+.felicia {
+   flex-basis: 1;
+   background-image: url(../img/felicia.jpg);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   border: 2px solid black;
+   border-radius: 10px;
+   width: 100%;
+   height: 100%;
+
+   animation-name: home;
+   animation: 1166ms ease 0s normal forwards 1 home;
+}
+
+.text { 
+   padding: 50px 10%;
+}
+
+.text h1 {
+   padding-bottom: 10px
+}
+
+.text p {
+   font: 15px Arial;
+   padding: 10px;
+   width: 100%;
+   word-spacing: auto;
+}
+
+.gallery {
+   /*background-color: #bea;*/
+   display: flex;
+   flex-flow: row nowrap;
+
+   justify-content: space-evenly;
+   align-items: center;
+
+   width: auto;
+   margin: 0 6%;
+
+   transform: translateX(27px);
+}
+
+.gallery img:hover { filter: brightness(110%) contrast(130%); }
+
+#img1, #img2, #img3 {
+   /*background-color: #abe;*/
+   margin: 2%;
+   flex-shrink: 1;
+}
+
+#img1 img, #img2 img, #img3 img {
+   flex-basis: 30%;
+   border-radius: 5px;
+   margin: auto;
+   max-height: 100%;
+   max-width: 100%;
+
+   -webkit-transition: filter .2s ease-in-out;
+   -moz-transition: filter .2s ease-in-out;
+   -o-transition: filter .2s ease-in-out;
+   transition: filter .2s ease-in-out;
+}
+
+#img1 img { animation-name: img1;
+animation: 1000ms ease 0s normal forwards 1 img1; }
+
+#img2 img { animation-name: img2;
+animation: 1082ms ease 0s normal forwards 1 img2; }
+
+#img3 img { animation-name: img3;
+animation: 1166ms ease 0s normal forwards 1 img3; }
+
+@keyframes home {
+   0% { opacity:0; transform: translateY(6%); }
+   8% { opacity:0; }
+   100% { opacity:1; transform: translateY(0%); }
+}
+
+@keyframes img1 {
+   0% { opacity:0; transform: translateY(6%); }
+   8% { opacity:0; }
+   100% { opacity:1; transform: translateY(0%); }
+}
+
+@keyframes img2 {
+   0% { opacity:0; transform: translateY(7%); }
+   16% { opacity:0; }
+   100% { opacity:1; transform: translateY(0%); }
+}
+
+@keyframes img3 {
+   0% { opacity:0; transform: translateY(8%); }
+   24% { opacity:0; }
+   100% { opacity:1; transform: translateY(0%); }
+}
+
+@media (max-width: 800px) {
+   .gallery {
+      flex-flow: column wrap;
+      transform: translateX(0);
+   }
+   #img1,#img2,#img3 {
+      padding: 10%;
+   }
+   .wrapper {
+      width: 100%;
+   }
+}
