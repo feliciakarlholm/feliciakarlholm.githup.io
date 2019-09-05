@@ -3,136 +3,51 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <title>felicia karlholm</title>
-      <LINK href="styles.css" rel="stylesheet" type="text/css">
-      <style>
-
-.picture {
-   display: flex;
-   flex-flow: row nowrap;
-   justify-content: center;
-   width: auto;
-   height: 600px;
-   margin: 0 10%;
-}
-
-.felicia {
-   flex-basis: 1 1 auto;
-   background-image: url(img/felicia.jpg);
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
-   border: 2px solid black;
-   border-radius: 10px;
-   width: 100%;
-   height: 100%;
-}
-
-.text { 
-   padding: 50px 10%;
-}
-
-.text h1 {
-   padding-bottom: 10px
-}
-
-.text p {
-   font: 15px Arial;
-   padding: 10px;
-   width: 100%;
-   word-spacing: auto;
-}
-
-.wrapper { animation-name: wrapper;
-   animation: 1166ms ease 0s normal forwards 1 wrapper; }
-
-@keyframes wrapper {
-   0% { opacity:0; transform: translateY(6%); }
-   8% { opacity:0; }
-   100% { opacity:1; transform: translateY(0%); }
-}
-
-      </style>
+      <link rel="stylesheet" href="./style/styles.scss">
    </head>
    <body>
-      <header id="header">
-	 <span class="title"></span>
 
+      <header>
+	 <span class="title"></span>
 	 <nav>
-	    <ul>
-	       <li>
-		  <img class="n1" src="img/hom.png" alt="home">
-	       </li>
-	       <li>
-		  <a href="gallery.html" class="current">
-		     <img class="n2" src="img/gal.png" alt="gallery">
+	    <ul class="nav-list">
+	       <li class="nav-items">
+		  <a href="./home.html">
+		     <img class="nav-home" src="./img/hom.png" alt="home">
 		  </a>
 	       </li>
-	       <li>
-		  <a href="contact.html">
-		     <img class="n3" src="img/con.png" alt="contact">
+	       <li class="nav-items">
+		  <a href="./gallery.html">
+		     <img class="nav-gallery" src="./img/gal.png" alt="gallery">
+		  </a>
+	       </li>
+	       <li class="nav-items">
+		  <a href="./contact.html">
+		     <img class="nav-contact" src="./img/con.png" alt="contact">
 		  </a>
 	       </li>
 	    </ul>
 	 </nav>
       </header>
 
-      <div class="wrapper">
+      <main data-router-wrapper>
+	 <section data-router-view="home" class="wrapper">
 
-	 <div class="picture">
-	    <div class="felicia"></div>
-	 </div>
+	    <div class="picture">
+	       <div class="felicia"></div>
+	    </div>
 
-	 <div class="text">
-	    <h1>Hvem er jeg?</h1>
-	    <p>
-	       Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae ornare
-	       mauris.  Aliquam a risus eget enim sodales aliquam vitae at mi. Nullam
-	       pellentesque, leo at lobortis hendrerit, lorem eros aliquam risus, sit amet
-	       laoreet libero risus non lectus.  Sed eget magna vitae orci egestas
-	       tristique id ac libero. Nunc libero nulla, pellentesque et pretium sit
-	       amet, volutpat a est. Maecenas ac hendrerit libero. Praesent sit amet
-	       nisi ac nulla fringilla elementum. Lorem ipsum dolor sit amet,
-	       consectetur adipiscing elit.  Nullam facilisis imperdiet eros non
-	       porttitor. Vestibulum ante ipsum primis in faucibus orci luctus et
-	       ultrices posuere cubilia Curae; Sed commodo eu arcu ac venenatis.
-	    </p>
-	    <p>
-	       Morbi mollis varius metus eu sollicitudin. Mauris ullamcorper, orci in
-	       condimentum facilisis, purus tortor lacinia purus, in congue quam arcu id
-	       nisi. Maecenas viverra lorem non rutrum vulputate. Sed elementum nulla et
-	       rhoncus convallis. Aliquam laoreet posuere tincidunt. Vivamus convallis,
-	       ipsum vitae egestas egestas, ex purus pharetra lacus, eget pulvinar nunc
-	       lacus vitae nibh. Etiam a consequat felis. Vivamus sit amet tellus a nibh
-	       ultricies egestas. Proin fringilla interdum quam, eu volutpat nulla tempor
-	       eget. Nullam dignissim scelerisque laoreet. Integer non mauris non metus
-	       tincidunt tempor vitae ac nulla. Vestibulum ante ipsum primis in faucibus
-	       orci luctus et ultrices posuere cubilia Curae;
-	    </p>
-	    <p>
-	       Fusce laoreet, ex et finibus tempor, lacus urna rhoncus odio, ut cursus mi
-	       metus a diam.  In eget dignissim metus, ac feugiat quam. Sed iaculis tellus
-	       a felis sagittis, ac faucibus risus ultrices. Nam at lobortis ipsum.
-	       Maecenas lacinia a tortor quis ornare. Suspendisse potenti. Morbi varius
-	       facilisis venenatis. Proin vulputate metus vitae tellus faucibus, sit
-	       amet efficitur lacus tempor. Praesent in imperdiet ligula. Lorem ipsum
-	       dolor sit amet, consectetur adipiscing elit.
-	    </p>
-	    <p>
-	       In in dapibus diam. Integer tincidunt accumsan consequat. Sed diam erat,
-	       pretium in suscipit id, tincidunt nec magna. Pellentesque at mattis leo,
-	       sit amet ultricies mauris. Vestibulum dolor lacus, tincidunt sit amet sem
-	       ultrices, scelerisque varius nisi. Nullam non bibendum ante, lacinia laoreet
-	       est.  Aliquam porttitor laoreet augue, feugiat porta est porta ac. Aenean
-	       vel pharetra sapien. Nullam luctus elit elit, sed mollis risus lobortis at.
-	       Donec lacinia dui nec nibh consectetur maximus. Nunc arcu neque,
-	       ultricies ac ullamcorper ac, porttitor sed augue.
-	    </p>
-	    <p>
-	       Sed eget ex nisi. Nulla sit amet odio augue. Donec in fermentum dolor. In
-	       sit amet nisi vitae erat egestas luctus. In vel mi dui. In hac habitasse
-	       platea dictumst. Mauris fermentum non odio vel venenatis.
-	    </p>
-	 </div>
-      </div>
+	    <div class="text">
+	       <h1>Hvem er jeg?</h1>
+	       <p>
+		  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae ornare
+		  mauris.  Aliquam a risus eget enim sodales aliquam vitae at mi. Nullam
+		  pellentesque, leo at lobortis hendrerit, lorem eros aliquam risus, sit
+		  amet laoreet libero risus non lectus.
+	       </p>
+	    </div>
+	 </section>
+      </main>
+   <script src="./js/main.js"></script>
    </body>
 </html>
