@@ -1,37 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="">
    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <title>felicia karlholm</title>
       <link rel="stylesheet" href="./style/styles.css">
    </head>
+
+   <header>
+      <span class="title"></span>
+      <nav>
+	 <ul class="nav-list">
+	    <li class="nav-items">
+	       <a href="./home.html">
+		  <img class="nav-home" src="./img/hom.png" alt="home">
+	       </a>
+	    </li>
+	    <li class="nav-items">
+	       <a href="./gallery.html">
+		  <img class="nav-gallery" src="./img/gal.png" alt="gallery">
+	       </a>
+	    </li>
+	    <li class="nav-items">
+	       <a href="./contact.html">
+		  <img class="nav-contact" src="./img/con.png" alt="contact">
+	       </a>
+	    </li>
+	 </ul>
+      </nav>
+   </header>
+
    <body>
-
-      <header>
-	 <span class="title"></span>
-	 <nav>
-	    <ul class="nav-list">
-	       <li class="nav-items">
-		  <a href="./home.html">
-		     <img class="nav-home" src="./img/hom.png" alt="home">
-		  </a>
-	       </li>
-	       <li class="nav-items">
-		  <a href="./gallery.html">
-		     <img class="nav-gallery" src="./img/gal.png" alt="gallery">
-		  </a>
-	       </li>
-	       <li class="nav-items">
-		  <a href="./contact.html">
-		     <img class="nav-contact" src="./img/con.png" alt="contact">
-		  </a>
-	       </li>
-	    </ul>
-	 </nav>
-      </header>
-
-      <main data-router-wrapper>
-	 <section data-router-view="home" class="wrapper">
+      <main id="barba-wrapper">
+	 <section class="barba-container wrapper">
 
 	    <div class="picture">
 	       <div class="felicia"></div>
@@ -48,6 +53,8 @@
 	    </div>
 	 </section>
       </main>
-   <script src="./js/main.js"></script>
+      <script src="./js/vendor/jquery.min.js"></script>
+      <script src="./js/vendor/barba.min.js"></script>
+      <script src="./js/main.js"></script>
    </body>
 </html>
