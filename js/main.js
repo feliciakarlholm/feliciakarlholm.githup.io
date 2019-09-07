@@ -1,64 +1,51 @@
 Barba.Pjax.start();
+Barba.Prefetch.init();
 
 var FadeTransition = Barba.BaseTransition.extend({
-  start: function() {
-    /**
-     * This function is automatically called as soon the Transition starts
-     * this.newContainerLoading is a Promise for the loading of the new container
-     * (Barba.js also comes with an handy Promise polyfill!)
-     */
+   start: function() {
+      Promise
+	 .all([this.newContainerLoading, this.fadeOut()])
+	 .then(this.fadeIn.bind(this));
+   },
 
-    // As soon the loading is finished and the old page is faded out, let's fade the new page
-    Promise
-      .all([this.newContainerLoading, this.fadeOut()])
-      .then(this.fadeIn.bind(this));
-  },
+   fadeOut: function() {
+      return $(this.oldContainer).animate({
+	 opacity: 0,
+	 top: '15px'
+      }).promise();
+   },
 
-  fadeOut: function() {
-    /**
-     * this.oldContainer is the HTMLElement of the old Container
-     */
+   fadeIn: function() {
+      var _this = this;
+      var $el = $(this.newContainer);
 
-    return $(this.oldContainer).animate({ opacity: 0 }).promise();
-  },
+      $(this.oldContainer).hide();
 
-  fadeIn: function() {
-    /**
-     * this.newContainer is the HTMLElement of the new Container
-     * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
-     * Please note, newContainer is available just after newContainerLoading is resolved!
-     */
+      $el.css({
+	 visibility : 'visible',
+	 opacity : 0
+      });
 
-    var _this = this;
-    var $el = $(this.newContainer);
+      $el.animate({ opacity: 1 }, 400, function() {
 
-    $(this.oldContainer).hide();
-
-    $el.css({
-      visibility : 'visible',
-      opacity : 0
-    });
-
-    $el.animate({ opacity: 1 }, 400, function() {
-      /**
-       * Do not forget to call .done() as soon your transition is finished!
-       * .done() will automatically remove from the DOM the old Container
-       */
-
-      _this.done();
-    });
-  }
+	 _this.done();
+      });
+   }
 });
 
-/**
- * Next step, you have to tell Barba to use the new Transition
- */
+var Gallery = Barba.BaseView.extend({
+   namespace: 'gallery',
+   onEnter: function() {
+      var enterGallery = new TimelineLite();
+      enterGallery.staggerFromTo( '.gallery-menu', 2,
+	 { y: 15, opacity: 0 },
+	 { y: 0, opacity: 1, ease: Expo.easeOut }, 0.3, 0.3)
+   },
+});
+
 
 Barba.Pjax.getTransition = function() {
-  /**
-   * Here you can use your own logic!
-   * For example you can use different Transition based on the current page or link...
-   */
-
-  return FadeTransition;
+   Gallery.init();
+   return FadeTransition;
 };
+
