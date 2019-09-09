@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "sass": "^1.23.0-module.beta.1"
+  },
+  "dependencies": {
+    "@barba/core": "^2.6.0",
+    "@dogstudio/highway": "^2.1.3",
+    "autoprefixer": "^9.6.1",
+    "gsap": "^2.1.3",
+    "jquery": "^3.4.1",
+    "jquery-ui-dist": "^1.12.1",
+    "postcss-cli": "^6.1.3",
+    "vendor": "^1.7.0"
+  }
+}

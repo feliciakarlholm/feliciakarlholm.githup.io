@@ -1,0 +1,58 @@
+#index {
+   overflow:hidden;
+}
+
+.front {
+   display: block;
+   position: absolute;
+   background-image: url(../img/front.png);
+   background-size: 84%;
+   background-position: translate(-30%,10%);
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 100%;
+   top: 100px;
+   left: 50%;
+   transform: translateX(-50%);
+
+   animation-name: image;
+   animation: 3500ms ease 0s normal forwards 1 image;
+}
+
+.enter-button {
+   display: block;
+   position: absolute;
+
+   background-color: white;
+   color: black;
+   border: 2px solid black;
+   border-radius: 3px;
+   opacity: 0.8;
+
+   margin: auto;
+   bottom: 10%;
+
+   left: 50%;
+   transform: translateX(-50%);
+
+   height: 40px;
+   width: 150px;
+
+   text-align: center;
+   text-decoration: none;
+   text-transform: uppercase;
+   line-height: 40px;
+
+   box-shadow: 1px 2px 4px black;
+
+   transition: all .2s ease-out;
+}
+
+.enter-button a:hover {
+   box-shadow: 3px 4px 6px black;
+   color: #000;
+}
+
+.enter-button a:active {
+   box-shadow: 1px 2px 4px black;
+}

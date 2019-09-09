@@ -1,0 +1,35 @@
+* { margin: 0; padding: 0; } 
+
+body { font: 14px Arial; }
+
+::-webkit-scrollbar { display: none; }
+
+::-moz-scrollbar { display: none; }
+
+@import './header';
+@import './index';
+@import './home';
+@import './gallery';
+@import './gal';
+
+.wrapper {
+   /*background-color: #eab;*/
+   display: block;
+   position: relative;
+   margin: auto;
+   width: 70%;
+   max-width: 1300px;
+}
+
+@media (max-width: 700px) {
+   .gallery {
+      flex-flow: column wrap;
+      transform: translateX(0);
+   }
+   .gallery-menu {
+      padding: 10%;
+   }
+   .wrapper {
+      width: 100%;
+   }
+}
