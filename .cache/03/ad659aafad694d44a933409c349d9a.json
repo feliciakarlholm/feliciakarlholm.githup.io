@@ -1,1 +1,1 @@
-{"id":"img/gal.png","dependencies":[],"generated":{"js":"module.exports = \"/fc459499fc66d71f80dada1d7ca9f3e0.png\";"},"sourceMaps":null,"error":null,"hash":"f75ff190dd353bceb9368c388c29e955","cacheData":{"env":{}}}
+{"id":"img/gal.png","dependencies":[{"name":"/home/ringdal/Projekter/feliciakarlholm.art/package.json","includedInParent":true,"mtime":1567959390090}],"generated":{"js":"module.exports = \"/fc459499fc66d71f80dada1d7ca9f3e0.png\";"},"sourceMaps":null,"error":null,"hash":"f75ff190dd353bceb9368c388c29e955","cacheData":{"env":{}}}
