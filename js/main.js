@@ -15,7 +15,8 @@ class Default extends Highway.Transition {
 	    { opacity: 1, y: 0,
 	       onComplete: function(){
 		  done();
-	       }}, 0.2
+	       }
+	    }, 0.2
 	 )
    }
    out({from, to, done}){
@@ -27,7 +28,8 @@ class Default extends Highway.Transition {
 	       onComplete: function(){
 		  from.remove();
 		  done();
-	       }}, 0
+	       }
+	    }, 0
 	 )
    }
 }
@@ -41,7 +43,8 @@ class Gallery extends Highway.Transition {
 	    { opacity: 1, y: 0,
 	       onComplete: function(){
 		  done();
-	       }}, 0.1
+	       }
+	    }, 0.1, 0
 	 )
    }
    out({from, to, done}) {
@@ -53,7 +56,8 @@ class Gallery extends Highway.Transition {
 	       onComplete: function(){
 		  from.remove();
 		  done();
-	       }}, 0.1
+	       }
+	    }, -0.1
 	 )
    }
 };
@@ -62,31 +66,29 @@ class Gal extends Highway.Transition {
    in({done}) {
       const tl = new TimelineMax();
       tl
-	 .to( header, 0.5, { opacity: 0, y: -40, display: 'none' }, 0)
-	 .fromTo( backGal, 0.5, { opacity: 0, x: -40, }, { opacity: 1, x: 0
-	    }
-	 )
+	 .to( header, 0.5, { opacity: 0, y: -40, display: 'none', ease: Back.easeIn }, 0)
+	 .fromTo( backGal, 0.5, { opacity: 0, x: -40, }, { opacity: 1, x: 0 })
 	 .staggerFromTo( cell, 0.5,
 	    { opacity: 0, y: 9, },
 	    { opacity: 1, y: 0,
 	       onComplete: function(){
 		  done();
-	       }}, 0.1
+	       }
+	    }, 0.1
 	 )
    }
    out({from, done}) {
       const tl = new TimelineMax();
       tl
-	 .to( backGal, 0.5, { opacity: 0, x: -40 }
-	 )
+	 .to( backGal, 0.5, { opacity: 0, x: -40 }, 0)
 	 .staggerFromTo( cell, 0.5,
 	    { opacity: 1, y: 0, },
-	    { opacity: 0, y: 9}, 0.1 )
-	 .to( header, 0.5, { opacity: 1, y: 0, display: 'block',
+	    { opacity: 0, y: 9 }, -0.1, 0.1 )
+	 .to( header, 0.5, { opacity: 1, y: 0, display: 'block', ease: Back.easeOut,
 	    onComplete: function(){
 	       from.remove();
-	       done(); }}
-	 )
+	       done(); 
+	    }})
    }
 }
 

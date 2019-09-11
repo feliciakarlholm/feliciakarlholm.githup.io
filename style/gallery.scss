@@ -1,8 +1,11 @@
 .gallery {
    display: flex;
    flex-flow: row nowrap;
-   justify-content: center;
+   justify-content: space-evenly;
    align-items: center;
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%, 8vh);
 
    .gallery-menu {
 	 margin: 0 1rem;
@@ -22,7 +25,7 @@
       flex: 0.42;
    }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
    .gallery {
       flex-flow: column wrap;
    }

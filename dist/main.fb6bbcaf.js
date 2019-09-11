@@ -17550,7 +17550,7 @@ function (_Highway$Transition2) {
         onComplete: function onComplete() {
           done();
         }
-      }, 0.1);
+      }, 0.1, 0);
     }
   }, {
     key: "out",
@@ -17569,7 +17569,7 @@ function (_Highway$Transition2) {
           from.remove();
           done();
         }
-      }, 0.1);
+      }, -0.1);
     }
   }]);
 
@@ -17597,7 +17597,8 @@ function (_Highway$Transition3) {
       tl.to(header, 0.5, {
         opacity: 0,
         y: -40,
-        display: 'none'
+        display: 'none',
+        ease: Back.easeIn
       }, 0).fromTo(backGal, 0.5, {
         opacity: 0,
         x: -40
@@ -17624,16 +17625,17 @@ function (_Highway$Transition3) {
       tl.to(backGal, 0.5, {
         opacity: 0,
         x: -40
-      }).staggerFromTo(cell, 0.5, {
+      }, 0).staggerFromTo(cell, 0.5, {
         opacity: 1,
         y: 0
       }, {
         opacity: 0,
         y: 9
-      }, 0.1).to(header, 0.5, {
+      }, -0.1, 0.1).to(header, 0.5, {
         opacity: 1,
         y: 0,
         display: 'block',
+        ease: Back.easeOut,
         onComplete: function onComplete() {
           from.remove();
           done();
@@ -17680,7 +17682,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34195" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41185" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

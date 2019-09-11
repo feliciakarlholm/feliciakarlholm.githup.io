@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../img/tit.png":[["tit.24aafc0f.png","img/tit.png"],"img/tit.png"],"./../img/front.png":[["front.4efbec60.png","img/front.png"],"img/front.png"],"./../img/felicia.jpg":[["felicia.37dc8c18.jpg","img/felicia.jpg"],"img/felicia.jpg"],"_css_loader":"../../../../usr/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../img/tit.svg":[["tit.4849c881.svg","img/tit.svg"],"img/tit.svg"],"./../img/front.png":[["front.4efbec60.png","img/front.png"],"img/front.png"],"./../img/felicia.jpg":[["felicia.37dc8c18.jpg","img/felicia.jpg"],"img/felicia.jpg"],"_css_loader":"../../../../usr/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34195" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41185" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
