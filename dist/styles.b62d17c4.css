@@ -49,7 +49,7 @@ header .nav-list {
   align-content: center;
   position: absolute;
   left: 50%;
-  width: 250px;
+  width: 240px;
   transform: translate(-50%, 70px);
   padding-top: 20px;
 }
@@ -80,8 +80,8 @@ header .nav-gallery:hover, header .nav-contact:hover {
   width: 66px;
 }
 
-#index {
-  overflow: hidden;
+header {
+  display: none;
 }
 
 .front {
@@ -96,8 +96,6 @@ header .nav-gallery:hover, header .nav-contact:hover {
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  animation-name: image;
-  animation: 3500ms ease 0s normal forwards 1 image;
 }
 
 .enter-button {
@@ -119,7 +117,6 @@ header .nav-gallery:hover, header .nav-contact:hover {
   text-transform: uppercase;
   line-height: 40px;
   box-shadow: 1px 2px 4px black;
-  transition: all 0.2s ease-out;
 }
 
 .enter-button a:hover {

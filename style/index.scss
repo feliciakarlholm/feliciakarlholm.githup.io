@@ -1,7 +1,6 @@
-#index {
-   overflow:hidden;
+header {
+   display: none;
 }
-
 .front {
    display: block;
    position: absolute;
@@ -14,9 +13,6 @@
    top: 100px;
    left: 50%;
    transform: translateX(-50%);
-
-   animation-name: image;
-   animation: 3500ms ease 0s normal forwards 1 image;
 }
 
 .enter-button {
@@ -44,8 +40,6 @@
    line-height: 40px;
 
    box-shadow: 1px 2px 4px black;
-
-   transition: all .2s ease-out;
 }
 
 .enter-button a:hover {

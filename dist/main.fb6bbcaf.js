@@ -17466,6 +17466,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+var front = document.getElementsByClassName("front");
+var enterButton = document.getElementsByClassName("enter-button");
 var header = document.getElementsByClassName("header");
 var cell = document.getElementsByClassName("cell");
 var backGal = document.getElementsByClassName("back");
@@ -17631,7 +17633,7 @@ function (_Highway$Transition3) {
       }, {
         opacity: 0,
         y: 9
-      }, -0.1, 0.1).to(header, 0.5, {
+      }, -0.1, -0.1).to(header, 0.5, {
         opacity: 1,
         y: 0,
         display: 'block',
@@ -17647,11 +17649,86 @@ function (_Highway$Transition3) {
   return Gal;
 }(_highway.default.Transition);
 
+var Index =
+/*#__PURE__*/
+function (_Highway$Transition4) {
+  _inherits(Index, _Highway$Transition4);
+
+  function Index() {
+    _classCallCheck(this, Index);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Index).apply(this, arguments));
+  }
+
+  _createClass(Index, [{
+    key: "in",
+    value: function _in(_ref7) {
+      var from = _ref7.from,
+          to = _ref7.to,
+          done = _ref7.done;
+      var tl = new TimelineMax();
+      tl.to(header, 0, {
+        opacity: 0,
+        y: -40,
+        display: 'none'
+      }, 0).fromTo(front, 2.0, {
+        opacity: 0,
+        y: 20
+      }, {
+        opacity: 1,
+        y: 0
+      }, 0).fromTo(enterButton, 2.0, {
+        opacity: 0,
+        y: 20
+      }, {
+        opacity: 1,
+        y: 0,
+        onComplete: function onComplete() {
+          done();
+        }
+      }, 0.2);
+    }
+  }, {
+    key: "out",
+    value: function out(_ref8) {
+      var from = _ref8.from,
+          to = _ref8.to,
+          done = _ref8.done;
+      var tl = new TimelineMax();
+      tl.fromTo(enterButton, 1.0, {
+        opacity: 1,
+        y: 0
+      }, {
+        opacity: 0,
+        y: 20
+      }, 0.0).fromTo(front, 0.7, {
+        opacity: 1,
+        y: 0
+      }, {
+        opacity: 0,
+        y: 20
+      }, 0).to(header, 0.5, {
+        opacity: 1,
+        y: 0,
+        display: 'block',
+        ease: Back.easeOut,
+        onComplete: function onComplete() {
+          from.remove();
+          done();
+        }
+      }, 0.9);
+    }
+  }]);
+
+  return Index;
+}(_highway.default.Transition);
+
 var H = new _highway.default.Core({
   transitions: {
     default: Default,
     gallery: Gallery,
-    gal: Gal
+    gal: Gal,
+    index: Index
   }
 });
 },{"@dogstudio/highway":"node_modules/@dogstudio/highway/build/highway.js","gsap":"node_modules/gsap/index.js"}],"../../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -17682,7 +17759,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41185" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34281" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
